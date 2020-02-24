@@ -3,18 +3,61 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.24852896702592445 -0.9044928799946061 -0.3465919540152224 2.16502
-  position -0.894428 1.0418 -0.559745
+  orientation 0.22176285237218632 0.9275728594469871 0.30071552624547276 4.084995990890504
+  position -2.836948434830579 3.0253436212067815 -2.404420359728429
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Floor {
-  size 1 1
+  size 3 3
+}
+Table {
+  translation -0.201623 6.66134e-15 -0.863277
+  size 0.8 0.3 0.5
+  feetSize 0.05 0.05
+}
+Table {
+  translation -0.340768 6.21725e-15 0.671729
+  name "table(1)"
+  size 0.8 0.3 0.5
+  feetSize 0.05 0.05
+}
+CardboardBox {
+  translation 0.516454 0.1 -0.588447
+  size 0.2 0.2 0.2
+}
+CardboardBox {
+  translation 1.11091 0.1 0.934764
+  name "cardboard box(2)"
+  size 0.2 0.2 0.2
+}
+CardboardBox {
+  translation 0.888851 0.1 0.154107
+  name "cardboard box(1)"
+  size 0.2 0.2 0.2
+}
+OilBarrel {
+  translation -1.15315 0.15 0.801624
+  height 0.3
+  radius 0.1
+}
+OilBarrel {
+  translation -1.04927 0.15 -1.01841
+  name "oil barrel(2)"
+  height 0.3
+  radius 0.1
+}
+OilBarrel {
+  translation 0.617681 0.15 0.848268
+  name "oil barrel(1)"
+  height 0.3
+  radius 0.1
 }
 DEF WALL_1 Solid {
-  translation 0.5 0.05 0
+  translation 1.5 0.05 0
+  scale 3.5 3.5 3.5
   children [
     DEF WALL_SHAPE Shape {
       appearance PBRAppearance {
@@ -30,7 +73,8 @@ DEF WALL_1 Solid {
   boundingObject USE WALL_SHAPE
 }
 DEF WALL_2 Solid {
-  translation -0.5 0.05 0
+  translation -1.5 0.05 0
+  scale 3.5 3.5 3.5
   children [
     USE WALL_SHAPE
   ]
@@ -38,8 +82,9 @@ DEF WALL_2 Solid {
   boundingObject USE WALL_SHAPE
 }
 DEF WALL_3 Solid {
-  translation 0 0.05 -0.5
+  translation 0 0.05 -1.5
   rotation 0 1 0 1.5708
+  scale 3.5 3.5 3.5
   children [
     USE WALL_SHAPE
   ]
@@ -47,8 +92,9 @@ DEF WALL_3 Solid {
   boundingObject USE WALL_SHAPE
 }
 DEF WALL_4 Solid {
-  translation 0 0.05 0.5
+  translation 0 0.05 1.5
   rotation 0 1 0 1.5708
+  scale 3.5 3.5 3.5
   children [
     USE WALL_SHAPE
   ]
@@ -203,5 +249,5 @@ Robot {
     density -1
     mass 1
   }
-  controller "4_wheels_collision_avoidance"
+  controller "collisionAvoidance"
 }
