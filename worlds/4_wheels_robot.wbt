@@ -107,7 +107,7 @@ Robot {
   children [
     DEF BODY Shape {
       appearance PBRAppearance {
-        baseColor 0.917647 0.145098 0.145098
+        baseColor 0.207736 0.155104 0.905098
         roughness 1
         metalness 0
       }
@@ -130,7 +130,7 @@ Robot {
         children [
           DEF WHEEL Shape {
             appearance PBRAppearance {
-              baseColor 0.305882 0.898039 0.25098
+              baseColor 0.905882 0.808039 0.20098
               roughness 1
               metalness 0
             }
@@ -249,5 +249,5 @@ Robot {
     density -1
     mass 1
   }
-  controller "collisionAvoidance"
+  controller "keyboardControl"
 }
